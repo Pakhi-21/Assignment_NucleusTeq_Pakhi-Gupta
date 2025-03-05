@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>Rolling Dice Game</h1>
+
+    <!-- Player Name Input Section -->
+    <div id="nameSection">
+        <label>Player 1 Name:</label>
+        <input type="text" id="player1NameInput" value="Player 1"><br>
+        <br>
+        <label>Player 2 Name:</label>
+        <input type="text" id="player2NameInput" value="Player 2"><br>
+        <br>
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <!-- Game Board  -->
+    <h2 id="message" style="display:none">Player-1 Turn</h2>
+    <div class="game-container" id="gameBoard" style="display: none;">
+       
+        <!-- Player 1 -->
+        <div class="player active" id="player1">
+            <h2 class="playerName"><span id="player1Name">Player 1</span></h2>
+            <h3>Score</h3>
+            <p class="score"><span id="player1Saved">0</span></p>
+            <p>Current Score: <span id="player1Current">0</span></p>
+        </div>
+
+        <!-- Dice -->
+        <div class="dice">
+            <img src="image/dice-1.png" id="diceImg" alt="Dice">
+        </div>
+        
+
+        <!-- Player 2 -->
+        <div class="player" id="player2">
+            <h2 class="playerName"><span id="player2Name">Player 2</span></h2>
+            <h3>Score</h3>
+            <p class="score"><span id="player2Saved">0</span></p>
+            <p>Current Score: <span id="player2Current">0</span></p>
+        </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="btn"> 
+    <button id="rollDice" style="display: none;">Roll Dice</button>
+    <button id="saveScore" style="display: none;">Save Score</button>
+    <br>
+    <button id="resetGame" style="display: none;">Reset</button>
+
+    <h1 id="winnerMessage"></h1>
+    </div>
+</body>
+</html>
