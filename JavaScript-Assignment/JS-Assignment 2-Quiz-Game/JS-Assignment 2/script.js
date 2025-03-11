@@ -20,6 +20,7 @@ let score = 0;
 let timer;
 let timeLeft = 15;
 let nextBtn;
+let questionCount;
 
 startBtn.addEventListener("click", startGame);
 playAgainBtn.addEventListener("click", () => location.reload());
@@ -33,7 +34,15 @@ async function startGame() {
         return; 
     }
 
-    await fetchQuestions(category, difficulty);
+    if (difficulty === "easy") {
+        questionCount = 10;
+    } else if (difficulty === "medium") {
+        questionCount = 15;
+    } else {
+        questionCount = 20;
+    }
+
+    await fetchQuestions(category, difficulty,questionCount);
     
     startScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
@@ -41,8 +50,8 @@ async function startGame() {
     displayQuestion();
 }
 
-async function fetchQuestions(category, difficulty) {
-    const apiurl = `https://opentdb.com/api.php?amount=20&category=${category}&difficulty=${difficulty}&type=multiple`;
+async function fetchQuestions(category, difficulty, questionCount) {
+    const apiurl = `https://opentdb.com/api.php?amount=${questionCount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     const response = await fetch(apiurl);
     const data = await response.json();
     questions = data.results.map(q => ({
@@ -50,6 +59,8 @@ async function fetchQuestions(category, difficulty) {
         correctAnswer: q.correct_answer,
         options: shuffle([...q.incorrect_answers, q.correct_answer])
     }));
+
+    currentQuestionIndex = 0;
 }
 
 function displayQuestion() {
@@ -61,6 +72,7 @@ function displayQuestion() {
     clearInterval(timer);
     timeLeft = 15;
     questionNo.textContent=currentQuestionIndex+1;
+    document.querySelector(".question-count").innerText=questions.length;
     timerElement.innerText = `${timeLeft}s`;
     feedbackElement.innerText = "";
     
@@ -161,6 +173,7 @@ function createNextButton() {
 function endGame() {
     gameScreen.classList.add("hidden");
     endScreen.classList.remove("hidden");
+    document.querySelector(" #end-screen .question-count").innerText=questions.length;
     finalScoreElement.innerText = score;
 }
 
