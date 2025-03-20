@@ -1,0 +1,79 @@
+ /* import the google font */
+ @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth&family=Concert+One&family=Mochiy+Pop+One&family=Montserrat:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Sixtyfour+Convergence&family=Ubuntu&display=swap');
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Montserrat", sans-serif;
+ }
+
+ h1{
+     margin-bottom: 10px;
+     padding:10px;
+     text-align: center;
+     
+ }
+
+ h2{
+     text-align: center;
+ }
+
+
+ body {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  min-height: 100vh;
+  background: lightgrey;
+  }
+
+  #login-screen{
+     background:#fff;
+     border-radius:8px;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+     width:400px;
+     padding: 20px;
+ 
+     
+  }
+  #loginForm{
+     padding:10px;
+     margin: 10px;
+  }
+
+  label{
+     font-size:18px;
+     font-weight: bold;
+     
+  }
+
+  input{
+     font-size: 16px;
+     padding:8px;
+     margin:8px;
+     border-radius: 8px;
+     font-weight: 500;
+     width: 95%;
+  }
+
+  button{
+    color: white;
+    background: #008fff; 
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor:pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+  transform: scale(1.1);
+  background: #008fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }

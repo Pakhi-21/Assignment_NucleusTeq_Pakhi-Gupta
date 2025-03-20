@@ -1,0 +1,120 @@
+
+/* import the google font */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth&family=Concert+One&family=Mochiy+Pop+One&family=Montserrat:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Sixtyfour+Convergence&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#admin {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    /* background: #007bff;
+    color: white; */
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#emp-list {
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #008fff;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit-btn {
+    background: #50ca50;
+}
+
+#delete-btn,#cancel {
+    background: #dc3545;
+}
+
+.edit-btn:hover {
+    background: #3c803c;
+}
+
+#addEmployeeContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#addEmployeeContainer button {
+    background: #008fff;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#update, #addEmployeeContainer button:hover {
+    background: #0056b3;
+}
+
+#update, #employeeForm button{
+    background: #008fff;
+}
+
+
+#employeeForm, #editEmployeeForm {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
