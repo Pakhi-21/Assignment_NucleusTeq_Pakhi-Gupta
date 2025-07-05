@@ -1,0 +1,74 @@
+body{
+  background-color:rgb(41, 40, 40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.header{
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.7em;
+  color: white;
+}
+
+.theme{
+   text-align: center;
+  font-weight: 700;
+  font-size: 2.1em;
+  color: rgb(50, 134, 50);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.post-card{
+  margin: 20px;
+  padding: 10px 50px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.3em;
+  width: 500px;
+}
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: rgb(50, 134, 50);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: rgb(99, 215, 99);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
